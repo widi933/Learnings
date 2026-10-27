@@ -1,6 +1,25 @@
 # registers
 
 rax -> return value, accumulator
+rcx -> counter, loop control
+rdx -> data, I/O
+rbx -> base, pointer
+rsp -> stack pointer
+rbp -> base pointer, frame pointer
+rsi -> source index, pointer
+rdi -> destination index, pointer
+r8  -> general purpose register
+r9  -> general purpose register
+r10 -> general purpose register
+r11 -> general purpose register
+r12 -> general purpose register
+r13 -> general purpose register
+r14 -> general purpose register
+r15 -> general purpose register
+
+## partial registers
+
+![partial registers](images/partial_register_access.png)
 
 ## syscall arguments
 
