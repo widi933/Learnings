@@ -20,6 +20,7 @@ r15 -> general purpose register
 ## partial registers
 
 ![partial registers](images/partial_register_access.png)
+![partial registers](images/partial_access_table.png)
 
 ## syscall arguments
 

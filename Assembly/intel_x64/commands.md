@@ -13,6 +13,20 @@ cmp rax, rdi        ; compare the value in rax with the value in rdi
                     ; (zero flag is set if they are equal)
 test rax, rdi       ; perform a bitwise AND between rax and rdi
                     ; (zero flag is set if the result is zero)
+movsx rax, rdi      ; move the value in rdi into rax with sign
+                    ; extension (top bits of rax are filled with the
+                    ; sign bit of rdi)
+inc rax             ; increment the value in rax by 1
+dec rax             ; decrement the value in rax by 1
+neg rax             ; negate the value in rax (two's complement)
+not rax             ; perform a bitwise NOT on the value in rax
+and rax, rdi        ; perform a bitwise AND between rax and rdi
+or rax, rdi         ; perform a bitwise OR between rax and rdi
+xor rax, rdi        ; perform a bitwise XOR between rax and rdi
+shl rax, 1          ; shift the value in rax left by 1 bit
+shr rax, 1          ; shift the value in rax right by 1 bit
+ror rax, 1          ; rotate the value in rax right by 1 bit
+rol rax, 1          ; rotate the value in rax left by 1 bit
 ```
 
 ## build
