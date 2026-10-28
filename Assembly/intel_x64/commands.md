@@ -1,9 +1,11 @@
 # commands
 
 ```assembly
-mov rax, 60         ; move the value 60 into the rax register
-mov rdi, 0          ; move the value 0 into the rdi register 
+mov rax, 0x12345    ; move the value 0x12345 into the rax register
+mov rdi, 42         ; move the value 42 into the rdi register 
                     ; (for example as the exit code)
+mov rsi, [rsp+rax*8]; move the value at the memory address (rsp + rax*8) into rsi
+mov [rax], rdi      ; move the value in rdi into the memory address in rax
 syscall             ; make the syscall
 add rax, rdi        ; add the value in rdi to the value in rax
 sub rax, 1          ; subtract 1 from the value in rax
@@ -27,6 +29,8 @@ shl rax, 1          ; shift the value in rax left by 1 bit
 shr rax, 1          ; shift the value in rax right by 1 bit
 ror rax, 1          ; rotate the value in rax right by 1 bit
 rol rax, 1          ; rotate the value in rax left by 1 bit
+push rax            ; push the value in rax onto the stack
+pop rax             ; pop the value from the stack into rax
 ```
 
 ## build
