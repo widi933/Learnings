@@ -24,7 +24,7 @@
   caption: [partial registers],
 )
 #figure(
-  image("images/partial_access_table.png"),
+  image("images/partial_access_table.png", width: 40%),
   caption: [partial register access table],
 )
 

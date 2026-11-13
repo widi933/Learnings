@@ -2,11 +2,11 @@
 
 == compiler
 
-#image("images/compiler.png")
+#image("images/compiler.png", width: 80%)
 
 == neumannsche Architektur
 
-#image("images/neumannsche_architektur.png")
+#image("images/neumannsche_architektur.png", width: 80%)
 
 == ram
 
