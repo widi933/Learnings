@@ -1,6 +1,18 @@
 = commands
 
-```asm
+#block(
+  width: 100%,
+  fill: rgb("#202124"),
+  radius: 5pt,
+  inset: 10pt,
+)[
+  #set text(
+    font: "DejaVu Sans Mono",
+    //size: 9pt,
+  )
+
+  #text(fill: rgb("#f1f1f1"))[
+    #raw(lang: "asm")[
 mov rax, 0x12345    ; move the value 0x12345 into the rax register
 mov rdi, 42         ; move the value 42 into the rdi register
                     ; (for example as the exit code)
@@ -31,7 +43,9 @@ ror rax, 1          ; rotate the value in rax right by 1 bit
 rol rax, 1          ; rotate the value in rax left by 1 bit
 push rax            ; push the value in rax onto the stack
 pop rax             ; pop the value from the stack into rax
-```
+    ]
+  ]
+]
 
 == build
 
@@ -55,7 +69,7 @@ For a normal build, use the following commands:
     align: left,
 
     // Erste Zeile
-    [#text(fill: rgb("#a1a1aa"))[\$]],
+    [#text(fill: rgb("#a1a1aa"))[$]],
     [#text(fill: rgb("#f1f1f1"))[
       #raw("as -o main.o main.s", lang: "bash")
     ]],
@@ -88,7 +102,7 @@ To build a library, use the following commands:
     align: left,
 
     // Erste Zeile
-    [#text(fill: rgb("#a1a1aa"))[\$]],
+    [#text(fill: rgb("#a1a1aa"))[$]],
     [#text(fill: rgb("#f1f1f1"))[
       #raw("as -o lib.o lib.s", lang: "bash")
     ]],
