@@ -12,8 +12,7 @@
   )
 
   #text(fill: rgb("#f1f1f1"))[
-    #raw(lang: "asm")[
-mov rax, 0x12345    ; move the value 0x12345 into the rax register
+    #raw("mov rax, 0x12345    ; move the value 0x12345 into the rax register
 mov rdi, 42         ; move the value 42 into the rdi register
                     ; (for example as the exit code)
 mov rsi, [rsp+rax*8]; move the value at the memory address (rsp + rax*8) into rsi
@@ -42,8 +41,8 @@ shr rax, 1          ; shift the value in rax right by 1 bit
 ror rax, 1          ; rotate the value in rax right by 1 bit
 rol rax, 1          ; rotate the value in rax left by 1 bit
 push rax            ; push the value in rax onto the stack
-pop rax             ; pop the value from the stack into rax
-    ]
+pop rax             ; pop the value from the stack into rax",
+    lang: "asm")
   ]
 ]
 
@@ -69,7 +68,7 @@ For a normal build, use the following commands:
     align: left,
 
     // Erste Zeile
-    [#text(fill: rgb("#a1a1aa"))[$]],
+    [#text(fill: rgb("#a1a1aa"))[\$]],
     [#text(fill: rgb("#f1f1f1"))[
       #raw("as -o main.o main.s", lang: "bash")
     ]],
@@ -102,7 +101,7 @@ To build a library, use the following commands:
     align: left,
 
     // Erste Zeile
-    [#text(fill: rgb("#a1a1aa"))[$]],
+    [#text(fill: rgb("#a1a1aa"))[\$]],
     [#text(fill: rgb("#f1f1f1"))[
       #raw("as -o lib.o lib.s", lang: "bash")
     ]],
